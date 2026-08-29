@@ -42,6 +42,15 @@
   const contactDirectory = document.querySelector("[data-contact-directory]");
   const contactLinks = [...document.querySelectorAll("[data-contact-link]")];
   const contactFooter = document.querySelector("[data-contact-footer]");
+  const floatingNav = document.querySelector("[data-floating-nav]");
+  const navLinks = [...document.querySelectorAll("[data-nav-target]")];
+  const menuToggle = document.querySelector("[data-menu-toggle]");
+  const mobileMenu = document.querySelector("[data-mobile-menu]");
+  const menuBackdrop = document.querySelector("[data-menu-backdrop]");
+  const mobileViewport = matchMedia("(max-width: 760px)");
+  const navSections = ["about", "technology", "projects", "experience", "recognition", "contact"]
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
 
   let currentFrame = 0;
   let targetFrame = 0;
@@ -52,6 +61,9 @@
   let pointerFrame = 0;
   let pointerX = 0;
   let pointerY = 0;
+  let previousNavScrollY = scrollY;
+  let navDirection = "up";
+  let mobileMenuOpen = false;
 
   const clamp = (value, minimum = 0, maximum = 1) =>
     Math.min(Math.max(value, minimum), maximum);
@@ -672,6 +684,83 @@
     });
   }
 
+  function setMobileMenu(open, restoreFocus = false) {
+    mobileMenuOpen = Boolean(open && mobileViewport.matches);
+    floatingNav?.classList.toggle("is-menu-open", mobileMenuOpen);
+    mobileMenu?.classList.toggle("is-open", mobileMenuOpen);
+    document.body.classList.toggle("nav-menu-open", mobileMenuOpen);
+
+    if (menuToggle) {
+      menuToggle.setAttribute("aria-expanded", String(mobileMenuOpen));
+      menuToggle.setAttribute("aria-label", mobileMenuOpen ? "Close navigation menu" : "Open navigation menu");
+    }
+
+    if (mobileMenu) {
+      mobileMenu.setAttribute("aria-hidden", String(!mobileMenuOpen));
+      mobileMenu.inert = !mobileMenuOpen;
+    }
+
+    if (mobileMenuOpen) {
+      requestAnimationFrame(() => {
+        const activeLink = mobileMenu?.querySelector('[aria-current="location"]');
+        (activeLink || mobileMenu?.querySelector("a"))?.focus();
+      });
+    } else if (restoreFocus) {
+      menuToggle?.focus();
+    }
+  }
+
+  function updateNavigation() {
+    if (!floatingNav || !heroScroll) return;
+
+    const currentScrollY = scrollY;
+    const delta = currentScrollY - previousNavScrollY;
+    if (Math.abs(delta) > 3) {
+      navDirection = delta > 0 ? "down" : "up";
+      previousNavScrollY = currentScrollY;
+    }
+
+    const heroEnd = heroScroll.offsetTop + heroScroll.offsetHeight;
+    const hasClearedHero = currentScrollY >= heroEnd - 1;
+    const contactTravel = contact ? Math.max(contact.offsetHeight - innerHeight, 1) : 1;
+    const contactProgress = contact ? clamp((currentScrollY - contact.offsetTop) / contactTravel) : 0;
+    const nearContactEnding = contactProgress >= 0.82 ||
+      currentScrollY + innerHeight >= document.documentElement.scrollHeight - 24;
+    const introReveal = currentScrollY < heroEnd + innerHeight * 0.35;
+    const hideForDirection = navDirection === "down" && !introReveal && !mobileMenuOpen;
+    const eligible = hasClearedHero && !nearContactEnding;
+
+    floatingNav.classList.toggle("is-eligible", eligible);
+    floatingNav.classList.toggle("is-scroll-hidden", hideForDirection || !eligible);
+
+    if (!eligible && mobileMenuOpen) setMobileMenu(false);
+
+    const activationLine = currentScrollY + innerHeight * 0.42;
+    let activeSection = navSections[0]?.id;
+    navSections.forEach((section) => {
+      if (activationLine >= section.offsetTop) activeSection = section.id;
+    });
+
+    navLinks.forEach((link) => {
+      if (link.dataset.navTarget === activeSection) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
+  function navigateToSection(event) {
+    const link = event.currentTarget;
+    const target = document.getElementById(link.dataset.navTarget);
+    if (!target) return;
+
+    event.preventDefault();
+    setMobileMenu(false);
+    target.scrollIntoView({
+      behavior: reducedMotion.matches ? "auto" : "smooth",
+      block: "start",
+    });
+    history.replaceState(null, "", `#${target.id}`);
+  }
+
   function updateTarget() {
     const scrollRange = Math.max(heroScroll.offsetHeight - innerHeight, 1);
     const progress = Math.min(Math.max(scrollY / scrollRange, 0), 1);
@@ -686,6 +775,7 @@
     updateRecognition();
     updateEducationCommunity();
     updateContact();
+    updateNavigation();
     requestTick();
   }
 
@@ -754,6 +844,34 @@
 
   addEventListener("scroll", updateTarget, { passive: true });
   addEventListener("pointermove", updatePointer, { passive: true });
+  menuToggle?.addEventListener("click", () => setMobileMenu(!mobileMenuOpen));
+  menuBackdrop?.addEventListener("click", () => setMobileMenu(false, true));
+  navLinks.forEach((link) => link.addEventListener("click", navigateToSection));
+  document.addEventListener("keydown", (event) => {
+    if (!mobileMenuOpen) return;
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      setMobileMenu(false, true);
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+    const focusable = [menuToggle, ...mobileMenu.querySelectorAll("a")].filter(Boolean);
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+  mobileViewport.addEventListener("change", (event) => {
+    if (!event.matches && mobileMenuOpen) setMobileMenu(false);
+    updateNavigation();
+  });
   addEventListener("resize", () => {
     sizeCanvas();
     updateTarget();

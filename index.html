@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#040608" />
+  <title>Sumit Helonde | AI Engineer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260829-hero-release" />
+</head>
+
+<body>
+  <main>
+    <section class="hero-scroll" aria-label="Portfolio introduction">
+      <canvas id="hero" aria-label="Animated portrait of Sumit Helonde"></canvas>
+      <div class="hero-scrim hero-scrim--band" aria-hidden="true"></div>
+      <div class="hero-scrim hero-scrim--lead" aria-hidden="true"></div>
+      <div class="hero-scrim hero-scrim--trail" aria-hidden="true"></div>
+
+      <div class="hero-type" aria-label="Sumit Helonde, AI Engineer">
+        <h1 class="hero-cue hero-name" data-start="0" data-end="0.23" data-enter-x="-3" data-enter-y="12"
+          data-exit-x="2" data-exit-y="-8">
+          <span>SUMIT</span> <span>HELONDE</span>
+        </h1>
+
+        <p class="hero-cue hero-role" data-start="0.18" data-end="0.39" data-enter-x="-10" data-enter-y="0"
+          data-exit-x="8" data-exit-y="0">
+          <span>AI</span>
+          <span>ENGINEER</span>
+        </p>
+
+        <p class="hero-cue hero-statement" data-start="0.34" data-end="0.61" data-enter-x="0" data-enter-y="14"
+          data-exit-x="0" data-exit-y="-10">
+          <span>I QUESTION.</span>
+          <span>I LEARN.</span>
+          <span>I GROW.</span>
+        </p>
+
+        <p class="hero-cue hero-capability hero-capability--lead" data-start="0.56" data-end="0.75" data-enter-x="-12"
+          data-enter-y="0" data-exit-x="5" data-exit-y="-4">
+          CURIOUS <b>.</b> DISCIPLINED <b>.</b> ALWAYS LEARNING
+        </p>
+
+        <p class="hero-cue hero-capability hero-capability--trail" data-start="0.67" data-end="0.84" data-enter-x="12"
+          data-enter-y="0" data-exit-x="-5" data-exit-y="-4">
+          PURPOSEFUL <b>.</b> RESILIENT <b>.</b> GROWTH-DRIVEN
+        </p>
+
+        <p class="hero-cue hero-explore" data-start="0.8" data-hold="true" data-enter-x="0" data-enter-y="14">
+          <span>EXPLORE</span>
+          <span>MY WORK</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="about-scroll" id="about" aria-labelledby="about-title">
+      <div class="about-sticky">
+        <figure class="about-object about-object--neural" data-enter-x="-90" data-enter-y="-70" data-exit-x="-60"
+          data-exit-y="-55" data-depth="1.1" aria-hidden="true">
+          <svg viewBox="0 0 180 180" role="presentation">
+            <defs>
+              <radialGradient id="neural-glass" cx="32%" cy="24%">
+                <stop offset="0" stop-color="#f4f7fb" stop-opacity=".92" />
+                <stop offset=".38" stop-color="#b9dcff" stop-opacity=".58" />
+                <stop offset="1" stop-color="#315475" stop-opacity=".12" />
+              </radialGradient>
+            </defs>
+            <circle cx="90" cy="90" r="55" fill="url(#neural-glass)" stroke="#c9e5ff" stroke-opacity=".55" />
+            <g fill="none" stroke="#e9f5ff" stroke-opacity=".58" stroke-width="1.4">
+              <path d="M55 62 87 46l31 18 14 34-24 31-42-2-20-31Z" />
+              <path d="m55 62 53 67M87 46 66 127m52-63L46 96m86 2-66 29" />
+            </g>
+            <g fill="#eef8ff">
+              <circle cx="55" cy="62" r="4" />
+              <circle cx="87" cy="46" r="5" />
+              <circle cx="118" cy="64" r="3.5" />
+              <circle cx="132" cy="98" r="5" />
+              <circle cx="108" cy="129" r="4" />
+              <circle cx="66" cy="127" r="3.5" />
+              <circle cx="46" cy="96" r="5" />
+            </g>
+          </svg>
+        </figure>
+
+        <figure class="about-object about-object--vector" data-enter-x="80" data-enter-y="-80" data-exit-x="65"
+          data-exit-y="-60" data-depth=".75" aria-hidden="true">
+          <svg viewBox="0 0 180 180" role="presentation">
+            <defs>
+              <linearGradient id="vector-glass" x1="0" y1="0" x2="1" y2="1">
+                <stop stop-color="#dff2ff" stop-opacity=".78" />
+                <stop offset="1" stop-color="#3c6287" stop-opacity=".16" />
+              </linearGradient>
+            </defs>
+            <path d="m90 20 60 40-11 73-78 27-42-62 25-65Z" fill="url(#vector-glass)" stroke="#c6e6ff"
+              stroke-opacity=".65" />
+            <g fill="none" stroke="#d8eeff" stroke-opacity=".54">
+              <path d="m90 20-1 71 50 42M44 33l45 58-70 7m70-7 61-31M61 160l28-69" />
+            </g>
+            <g fill="#eaf6ff">
+              <circle cx="90" cy="20" r="3" />
+              <circle cx="150" cy="60" r="4" />
+              <circle cx="139" cy="133" r="3" />
+              <circle cx="61" cy="160" r="4" />
+              <circle cx="19" cy="98" r="3" />
+              <circle cx="44" cy="33" r="4" />
+              <circle cx="89" cy="91" r="5" />
+            </g>
+          </svg>
+        </figure>
+
+        <figure class="about-object about-object--automation" data-enter-x="-100" data-enter-y="15" data-exit-x="-75"
+          data-exit-y="30" data-depth="1.35" aria-hidden="true">
+          <svg viewBox="0 0 200 120" role="presentation">
+            <defs>
+              <linearGradient id="loop-metal" x1="0" y1="0" x2="1" y2="1">
+                <stop stop-color="#eef8ff" />
+                <stop offset=".45" stop-color="#7aa1c4" />
+                <stop offset="1" stop-color="#1b324a" />
+              </linearGradient>
+            </defs>
+            <path d="M22 61c16-39 48-43 78-1 31 43 61 37 79 0-18-37-49-42-79 0-31 43-62 38-78 1Z" fill="none"
+              stroke="url(#loop-metal)" stroke-linecap="round" stroke-width="13" />
+            <circle cx="22" cy="61" r="7" fill="#dff1ff" />
+            <circle cx="179" cy="60" r="7" fill="#8db6da" />
+          </svg>
+        </figure>
+
+        <figure class="about-object about-object--vision" data-enter-x="105" data-enter-y="10" data-exit-x="80"
+          data-exit-y="18" data-depth="1.2" aria-hidden="true">
+          <svg viewBox="0 0 180 180" role="presentation">
+            <defs>
+              <linearGradient id="vision-metal" x1="0" y1="0" x2="1" y2="1">
+                <stop stop-color="#e9f7ff" stop-opacity=".95" />
+                <stop offset=".5" stop-color="#7ca7ce" stop-opacity=".68" />
+                <stop offset="1" stop-color="#18334d" stop-opacity=".35" />
+              </linearGradient>
+            </defs>
+            <circle cx="90" cy="90" r="58" fill="#b9dcff" fill-opacity=".08" stroke="url(#vision-metal)"
+              stroke-width="10" />
+            <circle cx="90" cy="90" r="24" fill="#dff2ff" fill-opacity=".22" stroke="#dff2ff" stroke-opacity=".8"
+              stroke-width="3" />
+            <circle cx="90" cy="90" r="7" fill="#eef9ff" />
+            <g fill="none" stroke="#c7e4fa" stroke-opacity=".52" stroke-width="2">
+              <path d="M90 32v34m0 48v34M32 90h34m48 0h34M49 49l24 24m34 34 24 24m0-82-24 24m-34 34-24 24" />
+            </g>
+          </svg>
+        </figure>
+
+        <div class="about-content">
+          <h2 class="about-title" id="about-title">ABOUT ME</h2>
+
+          <div class="about-moments">
+            <article class="about-moment" data-about-moment>
+              <p data-about-piece>
+                I'm a Computer Science & Business Systems student at St. Vincent Pallotti College of Engineering &
+                Technology, Nagpur, passionate about building intelligent systems that turn emerging technologies into
+                practical, real-world solutions.
+                My work spans AI/ML, RAG, LLMs, intelligent automation, vector databases, and data analytics. I enjoy
+                solving complex problems, designing scalable systems, and exploring how AI can improve accessibility,
+                efficiency, and decision-making.
+                What drives me is the belief that technology should be purposeful and accessible. Beyond building
+                projects, I also enjoy sharing knowledge through workshops and community initiatives, helping others
+                learn and experiment with technology.
+                I'm currently exploring opportunities where I can grow as an AI engineer, contribute to meaningful
+                products, and work on problems that create genuine impact.
+              </p>
+              <p class="about-principle" data-about-piece>
+                Purpose before novelty. Learn openly. Share what moves technology forward.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="technology" id="technology" aria-labelledby="technology-title">
+      <div class="technology-stage">
+        <h2 class="technology-title" id="technology-title">TECHNOLOGY STACK</h2>
+
+        <div class="technology-scenes">
+          <article class="technology-scene" data-tech-scene>
+            <h3 class="technology-category"><span>01</span>AI / ML</h3>
+            <div class="technology-constellation">
+              <figure class="technology-item" data-depth="1.2" style="--x: 8%; --y: 16%; --logo-size: 6.8rem;">
+                <span class="technology-logo-frame"><span class="technology-logo-fallback">PY</span><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                    alt="" /></span>
+                <figcaption>Python</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth=".8" style="--x: 35%; --y: 9%; --logo-size: 5.5rem;">
+                <span class="technology-logo-frame"><span class="technology-logo-fallback">PT</span><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg"
+                    alt="" /></span>
+                <figcaption>PyTorch</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth="1" style="--x: 63%; --y: 17%; --logo-size: 6.3rem;">
+                <span class="technology-logo-frame"><span class="technology-logo-fallback">TF</span><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+                    alt="" /></span>
+                <figcaption>TensorFlow</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth="1.35" style="--x: 78%; --y: 43%; --logo-size: 5.1rem;">
+                <span class="technology-logo-frame"><span class="technology-logo-fallback">SK</span><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
+                    alt="" /></span>
+                <figcaption>Scikit-learn</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth=".7"
+                style="--x: 39%; --y: 48%; --logo-size: 4.9rem; --brand: #00a3e0;">
+                <span class="technology-logo-frame technology-logo-frame--brand"><span
+                    class="technology-logo-fallback">MP</span></span>
+                <figcaption>MediaPipe</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="technology-scene" data-tech-scene>
+            <h3 class="technology-category"><span>02</span>RAG / AI SYSTEMS</h3>
+            <div class="technology-constellation">
+              <figure class="technology-item" data-depth="1.25"
+                style="--x: 7%; --y: 17%; --logo-size: 6.5rem; --brand: #45c4d6;"><span
+                  class="technology-logo-frame technology-logo-frame--brand"><span
+                    class="technology-logo-fallback">RAG</span></span>
+                <figcaption>RAG</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth=".8"
+                style="--x: 34%; --y: 8%; --logo-size: 5.2rem; --brand: #1b2430;"><span
+                  class="technology-logo-frame technology-logo-frame--brand"><span
+                    class="technology-logo-fallback">OL</span><img class="technology-logo--mono"
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/ollama.svg" alt="" /></span>
+                <figcaption>Ollama</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth="1.1"
+                style="--x: 62%; --y: 18%; --logo-size: 6rem; --brand: #00b88a;"><span
+                  class="technology-logo-frame technology-logo-frame--brand"><span
+                    class="technology-logo-fallback">PC</span></span>
+                <figcaption>Pinecone</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth="1.4"
+                style="--x: 78%; --y: 45%; --logo-size: 5rem; --brand: #0467df;"><span
+                  class="technology-logo-frame technology-logo-frame--brand"><span
+                    class="technology-logo-fallback">F</span></span>
+                <figcaption>FAISS</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth=".75"
+                style="--x: 42%; --y: 49%; --logo-size: 5.5rem; --brand: #00a1ea;"><span
+                  class="technology-logo-frame technology-logo-frame--brand"><span
+                    class="technology-logo-fallback">M</span></span>
+                <figcaption>Milvus</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth="1"
+                style="--x: 12%; --y: 49%; --logo-size: 4.8rem; --brand: #ea4b71;"><span
+                  class="technology-logo-frame technology-logo-frame--brand"><span
+                    class="technology-logo-fallback">n8n</span><img class="technology-logo--mono"
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/n8n.svg" alt="" /></span>
+                <figcaption>n8n</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="technology-scene" data-tech-scene>
+            <h3 class="technology-category"><span>03</span>BACKEND</h3>
+            <div class="technology-constellation">
+              <figure class="technology-item" data-depth="1.2" style="--x: 10%; --y: 17%; --logo-size: 6.8rem;"><span
+                  class="technology-logo-frame"><span class="technology-logo-fallback">FA</span><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+                    alt="" /></span>
+                <figcaption>FastAPI</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth=".8" style="--x: 40%; --y: 9%; --logo-size: 5.7rem;"><span
+                  class="technology-logo-frame"><span class="technology-logo-fallback">PG</span><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                    alt="" /></span>
+                <figcaption>PostgreSQL</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth="1.25" style="--x: 70%; --y: 21%; --logo-size: 6.2rem;"><span
+                  class="technology-logo-frame"><span class="technology-logo-fallback">SA</span><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg"
+                    alt="" /></span>
+                <figcaption>SQLAlchemy</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth="1"
+                style="--x: 49%; --y: 50%; --logo-size: 5.1rem; --brand: #c94a2e;"><span
+                  class="technology-logo-frame technology-logo-frame--brand"><span
+                    class="technology-logo-fallback">A</span></span>
+                <figcaption>Alembic</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="technology-scene" data-tech-scene>
+            <h3 class="technology-category"><span>04</span>FRONTEND</h3>
+            <div class="technology-constellation">
+              <figure class="technology-item" data-depth="1.25"
+                style="--x: 12%; --y: 18%; --logo-size: 7rem; --brand: #f3f5f7; --logo-ink: #101820;"><span
+                  class="technology-logo-frame technology-logo-frame--brand technology-logo-frame--light"><span
+                    class="technology-logo-fallback">N</span><img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/nextdotjs.svg" alt="" /></span>
+                <figcaption>Next.js</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth=".8" style="--x: 46%; --y: 10%; --logo-size: 5.8rem;"><span
+                  class="technology-logo-frame"><span class="technology-logo-fallback">R</span><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                    alt="" /></span>
+                <figcaption>React</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth="1.1" style="--x: 70%; --y: 42%; --logo-size: 6.3rem;"><span
+                  class="technology-logo-frame"><span class="technology-logo-fallback">TS</span><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                    alt="" /></span>
+                <figcaption>TypeScript</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="technology-scene" data-tech-scene>
+            <h3 class="technology-category"><span>05</span>3D / MOTION</h3>
+            <div class="technology-constellation">
+              <figure class="technology-item" data-depth="1.3" style="--x: 8%; --y: 17%; --logo-size: 7.2rem;"><span
+                  class="technology-logo-frame"><span class="technology-logo-fallback">BL</span><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg"
+                    alt="" /></span>
+                <figcaption>Blender</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth=".8"
+                style="--x: 36%; --y: 8%; --logo-size: 5.2rem; --brand: #f5792a;"><span
+                  class="technology-logo-frame technology-logo-frame--brand technology-logo-frame--file"><span
+                    class="technology-logo-fallback">GLB</span></span>
+                <figcaption>GLB</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth="1.05"
+                style="--x: 65%; --y: 17%; --logo-size: 6rem; --brand: #0876bd;"><span
+                  class="technology-logo-frame technology-logo-frame--brand technology-logo-frame--file"><span
+                    class="technology-logo-fallback">FBX</span></span>
+                <figcaption>FBX</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth="1.4"
+                style="--x: 77%; --y: 46%; --logo-size: 5rem; --brand: #6f8faf;"><span
+                  class="technology-logo-frame technology-logo-frame--brand technology-logo-frame--file"><span
+                    class="technology-logo-fallback">BVH</span></span>
+                <figcaption>BVH</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth=".75"
+                style="--x: 39%; --y: 49%; --logo-size: 5.6rem; --brand: #ff4d00;"><span
+                  class="technology-logo-frame technology-logo-frame--brand"><span
+                    class="technology-logo-fallback">R</span></span>
+                <figcaption>Rokoko</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="technology-scene" data-tech-scene>
+            <h3 class="technology-category"><span>06</span>TOOLS / COMMERCE</h3>
+            <div class="technology-constellation">
+              <figure class="technology-item" data-depth="1.3"
+                style="--x: 9%; --y: 18%; --logo-size: 6.8rem; --brand: #2b84ea;"><span
+                  class="technology-logo-frame technology-logo-frame--brand"><span
+                    class="technology-logo-fallback">RZ</span><img class="technology-logo--mono"
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/razorpay.svg" alt="" /></span>
+                <figcaption>Razorpay</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth=".8" style="--x: 39%; --y: 9%; --logo-size: 5.6rem;"><span
+                  class="technology-logo-frame"><span class="technology-logo-fallback">G</span><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                    alt="" /></span>
+                <figcaption>Git</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth="1.1"
+                style="--x: 69%; --y: 21%; --logo-size: 6.4rem; --brand: #24292f;"><span
+                  class="technology-logo-frame technology-logo-frame--brand"><span
+                    class="technology-logo-fallback">GH</span><img class="technology-logo--mono"
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/github.svg" alt="" /></span>
+                <figcaption>GitHub</figcaption>
+              </figure>
+              <figure class="technology-item" data-depth="1.25" style="--x: 49%; --y: 49%; --logo-size: 6rem;"><span
+                  class="technology-logo-frame"><span class="technology-logo-fallback">D</span><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                    alt="" /></span>
+                <figcaption>Docker</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="projects-stage">
+        <h2 class="projects-title" id="projects-title">WHAT I’VE BUILT</h2>
+
+        <header class="projects-header">
+          <div class="projects-badge">
+            <span class="projects-badge-dot"></span>
+            <span class="projects-badge-text">PORTFOLIO SHOWCASE</span>
+          </div>
+          <div class="projects-progress-track">
+            <div class="projects-progress-bar" id="projects-progress-bar"></div>
+            <span class="projects-step-indicator" id="projects-step-indicator">01 / 04</span>
+          </div>
+        </header>
+
+        <div class="projects-split-stage">
+          <!-- PROJECT 01: SIGNORA AI -->
+          <article class="project-scene" data-project-scene="0">
+            <div class="project-narrative">
+              <div class="project-meta">
+                <span class="project-index">01</span>
+                <span class="project-tag">COMPUTER VISION &amp; ACCESSIBILITY</span>
+              </div>
+              <h3 class="project-name">Signora AI</h3>
+              <p class="project-headline">“Turning language into expressive 3D sign motion.”</p>
+              <p class="project-description">
+                An AI-powered accessibility system that transforms Indian Sign Language inputs into expressive 3D avatar
+                motion using computer vision, pose estimation, hand tracking, motion processing, intelligent retrieval,
+                and avatar retargeting.
+              </p>
+
+              <div class="project-metrics">
+                <div class="metric-card">
+                  <span class="metric-value">98.4%</span>
+                  <span class="metric-label">Recognition Accuracy</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">&lt;25ms</span>
+                  <span class="metric-label">Edge Latency</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">100+</span>
+                  <span class="metric-label">Dynamic Gestures</span>
+                </div>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">PyTorch</span>
+                <span class="tech-pill">MediaPipe</span>
+                <span class="tech-pill">FastAPI</span>
+                <span class="tech-pill">Blender</span>
+                <span class="tech-pill">Three.js / GLB</span>
+              </div>
+            </div>
+
+            <div class="project-visual">
+              <div class="project-card-glass project-card-glass--image">
+                <div class="card-header-bar">
+                  <span class="card-status-dot"></span>
+                  <span class="card-status-label">SIGNORA AI · 3D MOTION</span>
+                  <span class="card-hud-time">ACTIVE</span>
+                </div>
+                <div class="card-image-display">
+                  <img src="Signora AI — Indian Sign Language + 3D Motion.png"
+                    alt="Signora AI — Indian Sign Language + 3D Motion" class="project-card-img" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: NEXORA COMMERCE -->
+          <article class="project-scene" data-project-scene="1">
+            <div class="project-narrative">
+              <div class="project-meta">
+                <span class="project-index">02</span>
+                <span class="project-tag">AGENTIC COMMERCE &amp; INTELLIGENCE</span>
+              </div>
+              <h3 class="project-name">Nexora Commerce</h3>
+              <p class="project-headline">“AI-powered shopping and merchant intelligence.”</p>
+              <p class="project-description">
+                A full-stack agentic e-commerce platform that combines AI-powered product discovery, merchant growth
+                intelligence, inventory management, secure payments, and real-time sales analytics across Admin,
+                Merchant, and Customer workflows.
+              </p>
+
+              <div class="project-metrics">
+                <div class="metric-card">
+                  <span class="metric-value">+14.2%</span>
+                  <span class="metric-label">Conversion Lift</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">99.98%</span>
+                  <span class="metric-label">Fraud Precision</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">120ms</span>
+                  <span class="metric-label">Smart Gateway Route</span>
+                </div>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">Next.js</span>
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">TypeScript</span>
+                <span class="tech-pill">Razorpay</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">FastAPI</span>
+              </div>
+            </div>
+
+            <div class="project-visual">
+              <div class="project-card-glass project-card-glass--image">
+                <div class="card-header-bar">
+                  <span class="card-status-dot card-status-dot--green"></span>
+                  <span class="card-status-label">NEXORA COMMERCE · AGENTIC AI</span>
+                  <span class="card-hud-time">ACTIVE</span>
+                </div>
+                <div class="card-image-display">
+                  <img src="Nexora Commerce — Agentic AI + E-Commerce.png"
+                    alt="Nexora Commerce — Agentic AI + E-Commerce" class="project-card-img" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: COURAGE AI -->
+          <article class="project-scene" data-project-scene="2">
+            <div class="project-narrative">
+              <div class="project-meta">
+                <span class="project-index">03</span>
+                <span class="project-tag">MULTILINGUAL RAG &amp; LEGAL AI</span>
+              </div>
+              <h3 class="project-name">COURAGE AI</h3>
+              <p class="project-headline">“Simple legal help, powered by retrieval intelligence.”</p>
+              <p class="project-description">
+                A multilingual RAG-powered legal information assistant that simplifies complex legal information,
+                retrieves relevant context from a dedicated knowledge base, and connects users with practical legal
+                resources and support information.
+              </p>
+
+              <div class="project-metrics">
+                <div class="metric-card">
+                  <span class="metric-value">42ms</span>
+                  <span class="metric-label">P95 Vector Search</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">99.2%</span>
+                  <span class="metric-label">Retrieval MRR@10</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">100%</span>
+                  <span class="metric-label">Verified Citations</span>
+                </div>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">Milvus</span>
+                <span class="tech-pill">Ollama</span>
+                <span class="tech-pill">FAISS</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">FastAPI</span>
+                <span class="tech-pill">PostgreSQL</span>
+              </div>
+            </div>
+
+            <div class="project-visual">
+              <div class="project-card-glass project-card-glass--image">
+                <div class="card-header-bar">
+                  <span class="card-status-dot card-status-dot--cyan"></span>
+                  <span class="card-status-label">COURAGE AI · LEGAL RAG</span>
+                  <span class="card-hud-time">ACTIVE</span>
+                </div>
+                <div class="card-image-display">
+                  <img src="COURAGE AI — Legal Intelligence + RAG.png" alt="COURAGE AI — Legal Intelligence + RAG"
+                    class="project-card-img" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 04: OPI -->
+          <article class="project-scene" data-project-scene="3">
+            <div class="project-narrative">
+              <div class="project-meta">
+                <span class="project-index">04</span>
+                <span class="project-tag">MARITIME AI &amp; ROUTE OPTIMIZATION</span>
+              </div>
+              <h3 class="project-name">OPI</h3>
+              <span class="project-subtitle">Oceanic Point of Inaccessibility</span>
+              <p class="project-headline">“Smarter routes. Lower fuel. Sustainable shipping.”</p>
+              <p class="project-description">
+                A maritime route-optimization system designed to improve cargo ship navigation by reducing unnecessary
+                travel distance, fuel consumption, operational cost, and environmental impact using routing logic, APIs,
+                and data-driven decision support.
+              </p>
+
+              <div class="project-metrics">
+                <div class="metric-card">
+                  <span class="metric-value">99.9%</span>
+                  <span class="metric-label">Route Precision</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">4.8x</span>
+                  <span class="metric-label">Compute Speedup</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">50+</span>
+                  <span class="metric-label">Port API Nodes</span>
+                </div>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">FastAPI</span>
+                <span class="tech-pill">Docker</span>
+                <span class="tech-pill">SQLAlchemy</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">Alembic</span>
+              </div>
+            </div>
+
+            <div class="project-visual">
+              <div class="project-card-glass project-card-glass--image">
+                <div class="card-header-bar">
+                  <span class="card-status-dot card-status-dot--purple"></span>
+                  <span class="card-status-label">OPI · ROUTE OPTIMIZATION</span>
+                  <span class="card-hud-time">ACTIVE</span>
+                </div>
+                <div class="card-image-display">
+                  <img src="OPI — Oceanic Point of Inaccessibility.png" alt="OPI — Oceanic Point of Inaccessibility"
+                    class="project-card-img" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience" aria-labelledby="experience-title">
+      <div class="experience-stage">
+        <h2 class="experience-title" id="experience-title">EXPERIENCE</h2>
+
+        <div class="experience-scene" data-exp-scene>
+
+          <!-- Company + Role row -->
+          <div class="experience-company experience-reveal" data-exp-reveal>
+            <span class="experience-eyebrow">AI / ML INTERN</span>
+            <p class="experience-company-name">MATVERSE</p>
+            <span class="experience-company-full">Matverse Vision Pvt. Ltd.</span>
+          </div>
+
+          <div class="experience-role experience-reveal" data-exp-reveal>
+            <span class="experience-meta-label">TENURE</span>
+            <p>Mar 2026 – Aug 2026</p>
+          </div>
+
+          <!-- Contributions -->
+          <div class="experience-summary experience-reveal" data-exp-reveal>
+            <span class="experience-meta-label">CONTRIBUTIONS</span>
+            <ul class="experience-contributions">
+              <li>Designing AI-driven automation solutions in the agriculture domain.</li>
+              <li>Automated domain workflows using machine learning and data processing pipelines.</li>
+              <li>Contributed to model integration, data engineering, and system optimisation.</li>
+            </ul>
+          </div>
+
+          <!-- Focus chips -->
+          <div class="experience-focus experience-reveal" data-exp-reveal>
+            <span class="experience-meta-label">CORE FOCUS</span>
+            <div class="experience-focus-list">
+              <div class="experience-focus-chip" data-exp-chip="0">AI / ML</div>
+              <div class="experience-focus-chip" data-exp-chip="1">Agriculture Domain</div>
+              <div class="experience-focus-chip" data-exp-chip="2">Data Engineering</div>
+              <div class="experience-focus-chip" data-exp-chip="3">Workflow Automation</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="recognition" id="recognition" aria-labelledby="recognition-title">
+      <div class="recognition-stage">
+        <h2 class="recognition-title" id="recognition-title">RECOGNITION</h2>
+
+        <div class="recognition-moments">
+          <article class="recognition-moment" data-recognition-moment>
+            <div class="recognition-visual">
+              <figure class="recognition-image-frame recognition-image-frame--portrait" data-recognition-piece>
+                <img src="assets/recognition/hack-and-make.jpg" width="1280" height="2274"
+                  alt="Sumit Helonde at the Hack and Make MP Startup event" loading="lazy" decoding="async">
+              </figure>
+              <p class="recognition-ordinal" data-recognition-piece aria-hidden="true">01</p>
+            </div>
+            <div class="recognition-story">
+              <p class="recognition-result" data-recognition-piece>TOP 30 <span>/ 500+ TEAMS</span></p>
+              <h3 class="recognition-event" data-recognition-piece>HACK &amp; MAKE <span>MP STARTUP</span></h3>
+              <p class="recognition-description" data-recognition-piece>
+                Selected among the Top 30 teams from more than 500 participants in a Government of Madhya Pradesh
+                startup competition focused on innovation, execution, scalability, and product thinking.
+              </p>
+              <div class="recognition-tags" data-recognition-piece aria-label="Skills demonstrated">
+                <span>Startup</span><span>Innovation</span><span>Product Thinking</span><span>Scalability</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="recognition-moment" data-recognition-moment>
+            <div class="recognition-visual">
+              <figure class="recognition-image-frame" data-recognition-piece>
+                <img src="assets/recognition/socio-ideathon-2025.jpg" width="2048" height="1152"
+                  alt="Socio-Ideathon 2025 award presentation at Gramayan Udyam Expo" loading="lazy" decoding="async">
+              </figure>
+              <p class="recognition-ordinal" data-recognition-piece aria-hidden="true">02</p>
+            </div>
+            <div class="recognition-story">
+              <p class="recognition-result" data-recognition-piece>3RD PRIZE <span>2ND RUNNER-UP</span></p>
+              <h3 class="recognition-event" data-recognition-piece>SOCIO-IDEATHON <span>2025</span></h3>
+              <p class="recognition-description" data-recognition-piece>
+                Recognized for presenting COURAGE AI, an AI-powered legal information assistant focused on improving
+                access to understandable legal information and social impact.
+              </p>
+              <div class="recognition-tags" data-recognition-piece aria-label="Skills demonstrated">
+                <span>AI for Good</span><span>LegalTech</span><span>RAG</span><span>Social Innovation</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="recognition-moment" data-recognition-moment>
+            <div class="recognition-visual">
+              <figure class="recognition-image-frame" data-recognition-piece>
+                <img src="assets/recognition/innovolt.jpg" width="1080" height="810"
+                  alt="Innovolt recognition ceremony for the OPI project" loading="lazy" decoding="async">
+              </figure>
+              <p class="recognition-ordinal" data-recognition-piece aria-hidden="true">03</p>
+            </div>
+            <div class="recognition-story">
+              <p class="recognition-result" data-recognition-piece>3RD RUNNER-UP</p>
+              <h3 class="recognition-event" data-recognition-piece>INNOVOLT</h3>
+              <p class="recognition-description" data-recognition-piece>
+                Recognized for OPI, a cargo ship navigation optimization solution designed to reduce travel
+                inefficiency, fuel consumption, cost, and environmental impact.
+              </p>
+              <div class="recognition-tags" data-recognition-piece aria-label="Skills demonstrated">
+                <span>Optimization</span><span>APIs</span><span>Sustainability</span><span>Algorithms</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="recognition-moment" data-recognition-moment>
+            <div class="recognition-visual">
+              <figure class="recognition-image-frame" data-recognition-piece>
+                <img src="assets/recognition/data-visualization-hackathon.jpg" width="1280" height="720"
+                  alt="Data Visualization Hackathon third-place award ceremony" loading="lazy" decoding="async">
+              </figure>
+              <p class="recognition-ordinal" data-recognition-piece aria-hidden="true">04</p>
+            </div>
+            <div class="recognition-story">
+              <p class="recognition-result" data-recognition-piece>3RD PLACE</p>
+              <h3 class="recognition-event" data-recognition-piece>DATA VISUALIZATION <span>HACKATHON</span></h3>
+              <p class="recognition-description" data-recognition-piece>
+                Secured 3rd place in a two-round analytics challenge involving data cleaning, manipulation, and Power
+                BI dashboard creation under time constraints.
+              </p>
+              <div class="recognition-tags" data-recognition-piece aria-label="Skills demonstrated">
+                <span>Power BI</span><span>Analytics</span><span>Visualization</span><span>Problem Solving</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="education-community" id="education-community" aria-labelledby="education-community-title">
+      <div class="education-community-stage">
+        <h2 class="education-community-title" id="education-community-title">EDUCATION &amp; COMMUNITY</h2>
+
+        <div class="education-community-scenes">
+          <article class="education-community-scene" data-education-community-scene>
+            <figure class="education-community-media" data-education-community-piece>
+              <img src="assets/community/junior-technex.jpg" width="2048" height="1152"
+                alt="Sumit Helonde leading an AI-assisted web development workshop for Junior Technex students"
+                loading="lazy" decoding="async">
+            </figure>
+            <div class="education-community-story">
+              <p class="education-community-role" data-education-community-piece>WORKSHOP INSTRUCTOR</p>
+              <h3 data-education-community-piece>WEB DEVELOPMENT <span>USING AI TOOLS</span></h3>
+              <dl class="education-community-facts" data-education-community-piece>
+                <div>
+                  <dt>Event</dt>
+                  <dd>Junior Technex</dd>
+                </div>
+                <div>
+                  <dt>Host</dt>
+                  <dd>St. Vincent Pallotti College of Engineering &amp; Technology</dd>
+                </div>
+                <div>
+                  <dt>Date</dt>
+                  <dd>January 2025</dd>
+                </div>
+              </dl>
+              <p class="education-community-description" data-education-community-piece>
+                Conducted a hands-on workshop for students in grades 5–7 on AI-assisted web development using Wix and
+                ORCHIDS.app, helping beginners build their first websites and understand modern no-code and low-code
+                tools.
+              </p>
+            </div>
+          </article>
+
+          <article class="education-community-scene education-community-scene--reverse" data-education-community-scene>
+            <figure class="education-community-media education-community-media--portrait"
+              data-education-community-piece>
+              <img src="assets/community/government-school.jpg" width="1280" height="2274"
+                alt="Sumit Helonde teaching students during a government school community initiative" loading="lazy"
+                decoding="async">
+            </figure>
+            <div class="education-community-story">
+              <p class="education-community-role" data-education-community-piece>ELECTRONICS INSTRUCTOR</p>
+              <h3 data-education-community-piece>CORE ELECTRONICS <span>FUNDAMENTALS</span></h3>
+              <dl class="education-community-facts" data-education-community-piece>
+                <div>
+                  <dt>Initiative</dt>
+                  <dd>Government School · Private Initiative</dd>
+                </div>
+                <div>
+                  <dt>Status</dt>
+                  <dd>Ongoing</dd>
+                </div>
+              </dl>
+              <p class="education-community-description" data-education-community-piece>
+                Voluntarily taught students in grades 7–9 core electronics fundamentals, including circuit theory,
+                components, and practical applications, with a focus on hands-on learning and bridging educational
+                gaps.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-scroll" id="contact" aria-labelledby="contact-title">
+      <div class="contact-stage">
+        <h2 class="contact-title" id="contact-title">CONTACT</h2>
+
+        <div class="contact-content">
+          <div class="contact-cta">
+            <h3 data-contact-reveal>LET’S BUILD <span>SOMETHING INTELLIGENT.</span></h3>
+            <p data-contact-reveal>
+              Open to AI/ML opportunities, research, collaborations, hackathons, and ambitious technology projects.
+            </p>
+            <a class="contact-primary" href="mailto:sumithelonde2005@gmail.com" data-contact-reveal>
+              <span>LET’S CONNECT</span>
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="contact-directory" data-contact-directory>
+            <address class="contact-location" data-contact-link>
+              <span>LOCATION</span>
+              <strong>Nagpur, Maharashtra, India</strong>
+            </address>
+
+            <nav class="contact-link-list" aria-label="Contact links">
+              <a class="contact-link" href="mailto:sumithelonde2005@gmail.com" data-contact-link>
+                <span class="contact-link-label">EMAIL</span>
+                <span class="contact-link-value">sumithelonde2005@gmail.com</span>
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <a class="contact-link" href="https://linkedin.com/in/sumit-helonde" target="_blank" rel="noreferrer"
+                data-contact-link>
+                <span class="contact-link-label">LINKEDIN</span>
+                <span class="contact-link-value">in/sumit-helonde</span>
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <a class="contact-link" href="https://github.com/Sumithelonde" target="_blank" rel="noreferrer"
+                data-contact-link>
+                <span class="contact-link-label">GITHUB</span>
+                <span class="contact-link-value">Sumithelonde</span>
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <a class="contact-link" href="Sumit_Resume_v8.pdf" target="_blank" rel="noreferrer" data-contact-link>
+                <span class="contact-link-label">RESUME</span>
+                <span class="contact-link-value">VIEW PDF</span>
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <footer class="contact-footer" data-contact-footer>
+          <strong>SUMIT HELONDE</strong>
+          <span>© 2026 Sumit Helonde</span>
+          <span>Nagpur, India</span>
+        </footer>
+      </div>
+    </section>
+  </main>
+  <script src="script.js?v=20260829-hero-release"></script>
+</body>
+
+</html>
